@@ -32,7 +32,9 @@ class ExcerptSerializer(serializers.HyperlinkedModelSerializer):
                   'end_time',
                   'themes',
                   'images',
-                  'women_set')
+                  'women'
+                  # 'women_set'
+        )
 
 class RelatedWomenSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -40,6 +42,6 @@ class RelatedWomenSerializer(serializers.HyperlinkedModelSerializer):
         model = Women
         excerpt = ExcerptSerializer
         location = LocationSerializer
-        fields = ("name","location","excerpt")
+        fields = ("name","location","excerpt_set")
 
 

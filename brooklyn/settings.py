@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'rest_framework',
 ]
 
@@ -65,8 +66,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'brooklyn.wsgi.application'
 
+
+WSGI_APPLICATION = 'brooklyn.wsgi.application'
 
 
 # Register database schemes in URLs.
@@ -188,3 +190,4 @@ try:
     from settings_local import *
 except ImportError, e:
     pass
+
